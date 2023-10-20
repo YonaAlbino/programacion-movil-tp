@@ -1,0 +1,228 @@
+header{
+    height: 300px;
+    border-bottom: 15px solid #469C3D;
+ 
+}
+
+header .imagen-header{
+    background-image: url('img/imagen-hero-sobreNosotros\ \(1\).jpg');
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: 100%; 
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-areas: ". uno uno ."
+                          "tres tres dos dos"
+                          "cinco cinco cuatro cuatro"
+                          ". seis seis  ."
+                        ;
+    justify-content: center;                     
+    grid-template-columns: repeat(4, 250px);
+    grid-gap: 30px;
+}
+
+main .sobre-nosotros{
+    grid-area: uno;
+}
+
+main .imagen1{
+    grid-area: dos;
+}
+
+main .nuestra-historia{
+    grid-area: tres;
+}
+
+main .imagen2{
+    grid-area: cuatro;
+}
+
+main .nuestra-mision{
+    grid-area: cinco;
+}
+
+main .nuestra-vision{
+    grid-area: seis;
+}
+
+
+main .imagen1 img, .imagen2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+main .titulo{
+    color: #469C3D;
+    font-family: "IBM Plex Sans", Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+footer  ul li{
+    list-style: none;
+    padding: 5px 0px 5px 0px;
+}
+
+footer  i{
+   color: #469C3D;
+   font-size: 20px;
+}
+
+footer a{
+    color: #000;
+    text-decoration: none;
+}
+
+
+main p{
+    text-align: justify;
+    color: #343434;
+    font-family: "IBM Plex Sans", Sans-serif;
+    font-size: 17px;
+}
+
+footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+    display: grid;
+    grid-template-areas: "uno uno . dos";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+footer  .parte-uno{
+    grid-area: uno;
+    display: grid;
+    grid-template-areas: "uno dos dos"
+                         "tres tres cuatro";
+}
+
+footer .parte-uno .logo{
+    grid-area: uno;
+}
+
+footer .parte-uno .logo a{
+    font-size: 30px;
+    color: #469C3D;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .parte-uno .texto{
+    grid-area: dos;
+}
+
+footer .parte-uno .texto p{
+    font-weight: bold;
+    font-size: 20px;
+   text-align: center;
+   margin: 0px;
+}
+
+
+
+footer .parte-uno .lista-uno{
+    grid-area: tres;
+}
+
+footer .parte-uno .lista-dos{
+    grid-area: cuatro;
+}
+
+
+footer  .parte-dos{
+    grid-area: dos;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .parte-dos .redes-sociales ul{
+    display: flex;
+}
+
+footer .parte-dos .redes-sociales ul li:not(:last-child){
+    margin-right: 20px;
+}
+
+footer .parte-dos .texto{
+    color: #469C3D;
+    font-size: 20px;
+} 
+
+footer .parte-dos .formulario{
+    display: flex;
+}
+
+footer .parte-dos input:nth-child(1){
+    border-radius: 50px;
+    padding: 10px;
+    border-color: #469C3D;
+    border: 2px solid #469C3D;
+}
+
+
+footer .parte-dos input:nth-child(2){
+    background-color: #469C3D;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+footer .parte-dos input:nth-child(2):hover{
+   cursor: pointer;
+   background-color: #1f6317;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-areas: ". uno uno ."
+                          ". dos dos ."
+                          ". tres tres ."
+                          ". cuatro cuatro  ."
+                          ". cinco cinco ."
+                          ". seis seis ."
+                        ;
+                        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
+
+    footer {
+ 
+        grid-template-areas: "uno uno" 
+                              "dos dos";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    footer  .parte-uno{
+        grid-area: uno;
+        display: grid;
+        grid-template-areas: ". uno uno  uno"
+                             "tres tres tres tres"
+                             "cuatro cuatro dos dos";
+    }
+
+    footer .parte-uno .texto{
+        align-items: center;
+        display: grid;
+    }    
+
+    footer .parte-dos .redes-sociales ul{
+        justify-content: center;
+    }
+
+    footer .parte-dos .texto{
+        text-align: center;
+    } 
+}

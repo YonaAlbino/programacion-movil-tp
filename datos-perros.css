@@ -1,0 +1,288 @@
+header {
+    height: 300px;
+    width: 100%;
+    border-bottom: 15px solid #1DB1DC;
+    margin-bottom: 300px;
+}
+
+body{
+    background-color: eee;
+}
+
+.imagen-header {
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+header .titulo {
+    text-align: center;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 20px;
+    color: #5893D4;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+header .titulo h1 {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "uno uno dos dos"
+        "tres tres cuatro cuatro"
+        "cinco cinco seis seis"
+        "siete siete ocho ocho";
+}
+
+main section {
+    grid-area: uno;
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+main section .titulo p {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dongle', sans-serif;
+    margin: 0px;
+    color: #1DB1DC;
+}
+
+main .dato-contenido {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main section .contenido-texto {
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: 18px;
+    display: flex;
+}
+
+main .imagen-dato {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+main section img {
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+main section:nth-child(1) {
+    grid-area: uno;
+}
+
+main section:nth-child(2) {
+    grid-area: dos;
+}
+
+main section:nth-child(4) {
+    grid-area: tres;
+}
+
+main section:nth-child(3) {
+    grid-area: cuatro;
+}
+
+main section:nth-child(5) {
+    grid-area: cinco;
+}
+
+main section:nth-child(6) {
+    grid-area: seis;
+}
+
+main section:nth-child(8) {
+    grid-area: siete;
+}
+
+main section:nth-child(7) {
+    grid-area: ocho;
+}
+
+
+
+footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 150px;
+    display: grid;
+    grid-template-areas: "uno uno . dos";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+footer i {
+    color: #1DB1DC;
+    font-size: 20px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .parte-uno {
+    grid-area: uno;
+    display: grid;
+    grid-template-areas: "uno dos dos"
+        "tres tres cuatro";
+}
+
+footer .parte-uno .logo {
+    grid-area: uno;
+}
+
+footer .parte-uno .logo a {
+    font-size: 30px;
+    color: #1DB1DC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .parte-uno .texto {
+    grid-area: dos;
+}
+
+footer .parte-uno .texto p {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+}
+
+
+
+footer .parte-uno .lista-uno {
+    grid-area: tres;
+}
+
+footer .parte-uno .lista-dos {
+    grid-area: cuatro;
+}
+
+
+footer .parte-dos {
+    grid-area: dos;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .parte-dos .redes-sociales ul {
+    display: flex;
+}
+
+footer .parte-dos .redes-sociales ul li:not(:last-child) {
+    margin-right: 20px;
+}
+
+footer .parte-dos .texto {
+    color: #1DB1DC;
+    font-size: 20px;
+}
+
+footer .parte-dos .formulario {
+    display: flex;
+}
+
+footer .parte-dos input:nth-child(1) {
+    border-radius: 50px;
+    padding: 10px;
+    border-color: #1DB1DC;
+    border: 2px solid #1DB1DC;
+}
+
+
+footer .parte-dos input:nth-child(2) {
+    background-color: #1DB1DC;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+
+footer .parte-dos input:nth-child(2):hover {
+    cursor: pointer;
+    background-color: #07789a;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    header .titulo {
+        width: 95%;
+        font-size: 18px;
+    }
+
+    main {
+        width: 95%;
+        margin: auto;
+        grid-template-areas:
+            "uno uno uno unos"
+            "dos dos dos dos"
+            "cuatro cuatro cuatro cuatro"
+            "tres tres tres tres"
+            "cinco cinco cinco cinco"
+            "seis seis seis seis"
+            "ocho ocho ocho ocho"
+            "siete siete siete siete";
+    }
+
+    main section .contenido-texto {
+        max-height: 60%;
+        overflow: scroll;
+    }
+
+    footer {
+        grid-template-areas: "uno uno"
+            "dos dos";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    footer .parte-uno {
+        grid-area: uno;
+        display: grid;
+        grid-template-areas: ". uno uno  uno"
+            "tres tres tres tres"
+            "cuatro cuatro dos dos";
+    }
+
+    footer .parte-uno .texto {
+        align-items: center;
+        display: grid;
+    }
+
+    footer .parte-dos .redes-sociales ul {
+        justify-content: center;
+    }
+
+    footer .parte-dos .texto {
+        text-align: center;
+    }
+}
